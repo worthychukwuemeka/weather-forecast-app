@@ -1,0 +1,273 @@
+/* Global reset and styling for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Satoshi', sans-serif;
+}
+
+/* Body styling with flex display for centering content */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #fffafa;
+  color: #fff;
+}
+
+/* Text selection styling */
+::selection {
+  color: #141414;
+  background: #fff;
+}
+
+/* Wrapper styling for the entire application */
+.wrapper {
+  width: 400px;
+  background: #1f1f1f;
+  border-radius: 7px;
+  border: 1px solid #fff;
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Header styling within the wrapper */
+.wrapper header {
+  display: flex;
+  font-size: 21px;
+  font-weight: 500;
+  color: #f579f3;
+  padding: 16px 15px;
+  align-items: center;
+  border-bottom: 1px solid #333;
+}
+
+/* Arrow icon styling in the header */
+header i {
+  font-size: 0em;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+/* Styling for the active state of the wrapper header icon */
+.wrapper.active header i {
+  margin-left: 5px;
+  font-size: 30px;
+}
+
+/* Input section styling */
+.wrapper .input-part {
+  margin: 20px 25px 30px;
+}
+
+/* Styling for the active state of the input section */
+.wrapper.active .input-part {
+  display: none;
+}
+
+/* Info text styling within the input section */
+.input-part .info-txt {
+  display: none;
+  font-size: 17px;
+  text-align: center;
+  padding: 12px 10px;
+  border-radius: 7px;
+  margin-bottom: 15px;
+}
+
+/* Styling for error info text in the input section */
+.input-part .info-txt.error {
+  color: #ff5252;
+  display: block;
+  background: #1f1f1f;
+  border: 1px solid #ff5252;
+}
+
+/* Styling for pending info text in the input section */
+.input-part .info-txt.pending {
+  color: #5362b8;
+  display: block;
+  background: #1f1f1f;
+  border: 1px solid #5362b8;
+}
+
+/* Styling for input and button within the input section */
+.input-part :where(input, button) {
+  width: 100%;
+  height: 55px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-radius: 7px;
+}
+
+/* Styling for input field within the input section */
+.input-part input {
+  text-align: center;
+  padding: 0 15px;
+  border: 1px solid #333;
+}
+
+/* Styling for input focus and valid states */
+.input-part input:is(:focus, :valid) {
+  border: 2px solid #f579f3;
+}
+
+/* Styling for input placeholder */
+.input-part input::placeholder {
+  color: #666;
+}
+
+/* Separator styling within the input section */
+.input-part .separator {
+  height: 1px;
+  width: 100%;
+  margin: 25px 0;
+  background: #333;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Separator text styling */
+.separator::before {
+  content: "or";
+  color: #666;
+  font-size: 19px;
+  padding: 0 15px;
+  background: #1f1f1f;
+}
+
+/* Button styling within the input section */
+.input-part button {
+  color: #fff;
+  cursor: pointer;
+  background: #f579f3;
+  transition: 0.3s ease;
+}
+
+/* Button hover styling */
+.input-part button:hover {
+  background: #f8a2f7;
+}
+
+/* Weather part styling */
+.wrapper .weather-part {
+  display: none;
+  margin: 30px 0 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Styling for the active state of the weather part */
+.wrapper.active .weather-part {
+  display: flex;
+}
+
+/* Weather icon styling */
+.weather-part img {
+  max-width: 125px;
+}
+
+/* Temperature display styling */
+.weather-part .temp {
+  display: flex;
+  font-weight: 500;
+  font-size: 72px;
+}
+
+/* Temperature number styling */
+.weather-part .temp .numb {
+  font-weight: 600;
+}
+
+/* Temperature degree styling */
+.weather-part .temp .deg {
+  font-size: 40px;
+  display: block;
+  margin: 10px 5px 0 0;
+}
+
+/* Weather description styling */
+.weather-part .weather {
+  font-size: 21px;
+  text-align: center;
+  margin: -5px 20px 15px;
+}
+
+/* Location details styling */
+.weather-part .location {
+  display: flex;
+  font-size: 19px;
+  padding: 0 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  align-items: flex-start;
+}
+
+/* Map icon styling in location details */
+.location i {
+  font-size: 22px;
+  margin: 4px 5px 0 0;
+}
+
+/* Bottom details section styling */
+.weather-part .bottom-details {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-top: 1px solid #333;
+}
+
+/* Column styling within the bottom details section */
+.bottom-details .column {
+  display: flex;
+  width: 100%;
+  padding: 15px 0;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styling for icons within the columns */
+.column i {
+  color: #43affc;
+  font-size: 40px;
+}
+
+/* Humidity column styling */
+.column.humidity {
+  border-left: 1px solid #333;
+}
+
+/* Details styling within the columns */
+.column .details {
+  margin-left: 3px;
+}
+
+/* Temperature and humidity text styling */
+.details .temp,
+.humidity span {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: -3px;
+}
+
+/* Degree styling within the temperature text */
+.details .temp .deg {
+  margin: 0;
+  font-size: 17px;
+  padding: 0 2px 0 1px;
+}
+
+/* Description text styling within the columns */
+.column .details p {
+  font-size: 14px;
+  margin-top: -6px;
+}
+
+/* Humidity icon styling */
+.humidity i {
+  font-size: 37px;
+}

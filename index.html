@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 18 | Weather Forecast Application</title>
+  <!-- External stylesheet for boxicons library -->
+  <link rel='stylesheet' href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css'>
+  <!-- Custom stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Font stylesheet from Fontshare API -->
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1,900,700,500,301,701,300,501,401,901,400,2&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- Header section with a back arrow and application title -->
+    <header><i class='bx bx-left-arrow-alt'></i>Weather App</header>
+
+    <!-- Input section for user interaction -->
+    <section class="input-part">
+      <p class="info-txt"></p>
+      <div class="content">
+        <!-- Input field for entering city name -->
+        <input type="text" spellcheck="false" placeholder="Enter city name" required>
+        <!-- Separator for styling -->
+        <div class="separator"></div>
+        <!-- Button to get device location -->
+        <button>Get Device Location</button>
+      </div>
+    </section>
+
+    <!-- Weather details section -->
+    <section class="weather-part">
+      <!-- Weather icon image -->
+      <img src="" alt="Weather Icon">
+      <!-- Temperature display -->
+      <div class="temp">
+        <span class="numb">_</span>
+        <span class="deg">°</span>C
+      </div>
+      <!-- Weather description -->
+      <div class="weather">_ _</div>
+      <!-- Location details -->
+      <div class="location">
+        <i class='bx bx-map'></i>
+        <span>_, _</span>
+      </div>
+      <!-- Additional details at the bottom -->
+      <div class="bottom-details">
+        <!-- Column for "Feels like" temperature -->
+        <div class="column feels">
+          <i class='bx bxs-thermometer'></i>
+          <div class="details">
+            <!-- Display "Feels like" temperature -->
+            <div class="temp">
+              <span class="numb-2">_</span>
+              <span class="deg">°</span>C
+            </div>
+            <!-- Description for "Feels like" temperature -->
+            <p>Feels like</p>
+          </div>
+        </div>
+        <!-- Column for humidity -->
+        <div class="column humidity">
+          <i class='bx bxs-droplet-half'></i>
+          <div class="details">
+            <!-- Display humidity percentage -->
+            <span>_</span>
+            <!-- Description for humidity -->
+            <p>Humidity</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- JavaScript file for functionality -->
+  <script src="./script.js"></script>
+</body>
+
+</html>
