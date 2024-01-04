@@ -9,7 +9,7 @@ const wrapper = document.querySelector(".wrapper"),
   arrowBack = wrapper.querySelector("header i");
 
 // Weatherbit API key
-const apiKey = "YOUR_API_KEY"; // Create and add your own Weatherbit API key from https://www.weatherbit.io/
+const apiKey = "0d89beb02ec849bc8761dfce0af2d4b1"; // Create and add your own Weatherbit API key from https://www.weatherbit.io/
 let api;
 
 // Event listener for input field keyup
